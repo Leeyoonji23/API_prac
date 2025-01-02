@@ -4,6 +4,7 @@ export const container = css`
   max-width: 80rem;
   margin: 0 auto;
   padding: 2rem;
+  color: #007bff;
 `;
 
 export const link = css`
@@ -15,29 +16,75 @@ export const link = css`
   }
 `;
 
-export const card = css`
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+export const button = css`
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: #0056b3;
   }
 `;
 
-export const globalStyles = css`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+export const checkbox = css`
+  margin-right: 1rem;
+`;
+
+export const formGroup = css`
+  margin-bottom: 1.6rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
   }
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+  }
+
+  textarea {
+    resize: none;
+  }
+`;
+
+export const formButton = css`
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+`;
+
+export const header = css`
+  text-align: center;
+  margin-bottom: 4rem;
+
+  h1 {
+    font-size: 2rem;
     color: #333;
-    line-height: 1.6;
+  }
+`;
+
+export const listActions = css`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.6rem;
+`;
+
+export const listStyles = css`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 1rem;
   }
 `;
