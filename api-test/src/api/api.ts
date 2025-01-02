@@ -25,7 +25,7 @@ export const createPost = async (postData: { title: string; body: string }) => {
 };
 
 //게시글 수정
-export const updatePost = async (
+export const rewritePost = async (
   postId: number,
   postData: { title: string; body: string }
 ) => {
