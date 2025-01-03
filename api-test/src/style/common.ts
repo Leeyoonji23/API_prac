@@ -1,5 +1,13 @@
-import { css } from "@emotion/react";
+import { Global, css } from "@emotion/react";
 
+
+const GlobalStyles = css`
+  button {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+`;
 export const container = css`
   max-width: 80rem;
   margin: 0 auto;
@@ -12,7 +20,7 @@ export const link = css`
   color: #007bff;
 
   &:hover {
-    text-decoration: underline;
+    color: #000000;
   }
 `;
 
