@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
 import { getPosts, deletePost } from "../api/api";
-import {
-  container,
-  link,
-  button,
-  checkbox,
-  listActions,
-  listStyles,
-} from "../style/common";
+import { link, button, checkbox, listActions } from "../style/common";
 
 interface Post {
   id: number;
@@ -75,8 +68,8 @@ const PostList = () => {
   }, [selectedPosts, posts]);
 
   return (
-    <div css={container}>
-      <h2>게시글</h2>
+    <div>
+      <h2>밑에는 게시글이야</h2>
       <div css={listActions}>
         <button css={button} onClick={handleSelectAll}>
           {selectAll ? "전체 해제" : "전체 선택"}
@@ -96,10 +89,10 @@ const PostList = () => {
           선택 삭제
         </button>
       </div>
-      <ul css={listStyles}>
+      <div>
         {posts.map((post) => (
-          <li key={post.id}>
-            <div>
+          <div key={post.id}>
+            <ul>
               <input
                 type="checkbox"
                 css={checkbox}
@@ -109,10 +102,10 @@ const PostList = () => {
               <a href={`/detail/${post.id}`} css={link}>
                 {post.title.slice(0, 5)}
               </a>
-            </div>
-          </li>
+            </ul>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

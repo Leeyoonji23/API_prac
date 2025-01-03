@@ -8,12 +8,10 @@ export const globalStyles = css`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
     line-height: 1.5;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #000000;
+    color: #f9f9f9;
+    margin-left: 5rem;
   }
 
   a {
@@ -24,12 +22,14 @@ export const globalStyles = css`
   button {
     all: unset;
     box-sizing: border-box;
-    padding: 8px 16px;
+    padding: 4px 8px;
     background-color: #007bff;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
     color: white;
-    border-radius: 4px;
+    border-radius: 0.8rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 
@@ -37,14 +37,21 @@ export const globalStyles = css`
     background-color: #0056b3;
   }
 
-  input,
+  input {
+    text-align: left;
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+
   textarea {
+    display: flex;
     font-family: inherit;
     font-size: inherit;
-    padding: 8px;
+    padding: 0.8rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0.4rem;
     width: 100%;
+    text-align: left;
   }
 
   textarea {
@@ -52,23 +59,20 @@ export const globalStyles = css`
   }
 
   h1,
-  h2,
+  h2 {
+    text-align: center;
+  }
   h3,
   h4,
   h5,
   h6 {
     margin-bottom: 1rem;
     font-weight: bold;
-    color: #222;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
+    color: #f9f9f9;
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 0 1rem;
   }

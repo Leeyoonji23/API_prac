@@ -1,19 +1,4 @@
-import { Global, css } from "@emotion/react";
-
-
-const GlobalStyles = css`
-  button {
-    all: unset;
-    box-sizing: border-box;
-    display: inline-block;
-  }
-`;
-export const container = css`
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 2rem;
-  color: #007bff;
-`;
+import { css } from "@emotion/react";
 
 export const link = css`
   text-decoration: none;
@@ -38,7 +23,7 @@ export const button = css`
 `;
 
 export const checkbox = css`
-  margin-right: 1rem;
+  margin-top: 0rem;
 `;
 
 export const formGroup = css`
@@ -82,17 +67,10 @@ export const header = css`
 
 export const listActions = css`
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-bottom: 1.6rem;
-`;
 
-export const listStyles = css`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    list-style: none;
-    margin-bottom: 1rem;
+  button {
+    margin-right: 1rem;
   }
 `;
