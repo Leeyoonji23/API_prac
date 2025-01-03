@@ -24,7 +24,7 @@ const PostForm = ({
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Title</label>
+        <label>제목</label>
         <input
           type="text"
           value={title}
@@ -32,7 +32,7 @@ const PostForm = ({
         />
       </div>
       <div>
-        <label>Body</label>
+        <label>내용</label>
         <textarea value={body} onChange={(e) => setBody(e.target.value)} />
       </div>
       <button type="submit">{postId ? "게시글 수정" : "완료"}</button>

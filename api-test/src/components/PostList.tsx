@@ -49,16 +49,6 @@ const PostList = () => {
     setSelectAll(!selectAll);
   };
 
-  const handleDeleteAll = async () => {
-    if (selectedPosts.size > 0) {
-      for (const postId of selectedPosts) {
-        await deletePost(postId);
-      }
-      setPosts((prev) => prev.filter((post) => !selectedPosts.has(post.id)));
-      setSelectedPosts(new Set());
-    }
-  };
-
   useEffect(() => {
     if (posts.length === selectedPosts.size) {
       setSelectAll(true);
@@ -76,17 +66,10 @@ const PostList = () => {
         </button>
         <button
           css={button}
-          onClick={handleDeleteAll}
-          disabled={selectedPosts.size === 0}
-        >
-          삭제
-        </button>
-        <button
-          css={button}
           onClick={handleDelete}
           disabled={selectedPosts.size === 0}
         >
-          선택 삭제
+          삭제
         </button>
       </div>
       <div>
